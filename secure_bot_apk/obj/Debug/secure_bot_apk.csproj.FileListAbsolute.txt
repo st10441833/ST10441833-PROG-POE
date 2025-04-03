@@ -1,0 +1,7 @@
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\bin\Debug\secure_bot_apk.exe.config
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\bin\Debug\secure_bot_apk.exe
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\bin\Debug\secure_bot_apk.pdb
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\obj\Debug\secure_bot_apk.csproj.AssemblyReference.cache
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\obj\Debug\secure_bot_apk.csproj.CoreCompileInputs.cache
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\obj\Debug\secure_bot_apk.exe
+C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\obj\Debug\secure_bot_apk.pdb
