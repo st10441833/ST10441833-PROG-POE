@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Media;
+using System.IO;
 
 namespace secure_bot_apk
 {
@@ -8,6 +10,12 @@ namespace secure_bot_apk
         {
             // Display the ASCII art logo with border
             DisplayLogo();
+
+            // Play the greeting audio
+            if (!PlayGreeting())
+            {
+                Console.WriteLine("Skipping greeting due to missing or unreadable file.");
+            }
 
             // Ask the user for their name with validation
             string userName = GetUserName();
@@ -37,6 +45,35 @@ namespace secure_bot_apk
             Console.WriteLine("Your Cybersecurity Assistant – Keeping You Safe Online!");
             Console.ResetColor();
             Console.WriteLine(new string('=', 50));
+        }
+
+        static bool PlayGreeting()
+        {
+            try
+            {
+                string filePath = @"C:\Users\mudau\source\repos\secure_bot_apk\secure_bot_apk\bin\Debug\greetings.wav.wav";
+
+                if (!File.Exists(filePath))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Error: Audio file not found at " + filePath);
+                    Console.ResetColor();
+                    return false;
+                }
+
+                using (SoundPlayer player = new SoundPlayer(filePath))
+                {
+                    player.PlaySync(); // Ensures the sound plays before continuing
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Error playing greeting: " + ex.Message);
+                Console.ResetColor();
+                return false;
+            }
         }
 
         static string GetUserName()
@@ -83,4 +120,5 @@ namespace secure_bot_apk
         }
     }
 }
+
 
